@@ -53,30 +53,6 @@ obj-$(CONFIG_WL12XX)	+= wl12xx/
 
 obj-$(CONFIG_IWM)	+= iwmc3200wifi/
 
-ifeq ($(TARGET_PRODUCT),SCH-I510)
-obj-$(CONFIG_BROADCOM_WIFI)	+= bcm4329/
-endif
+obj-$(CONFIG_BROADCOM_4329)	+= bcm4329/
 
-ifeq ($(TARGET_PRODUCT),SCH-I500)
-obj-$(CONFIG_BROADCOM_WIFI)	+= bcm4329/
-endif
-
-ifeq ($(TARGET_PRODUCT),SCH-I405)
-obj-$(CONFIG_BROADCOM_WIFI)	+= bcm4330/
-endif
-
-ifeq ($(TARGET_PRODUCT),SCH-I110)
-obj-$(CONFIG_BROADCOM_WIFI)	+= bcm4330/
-endif
-
-ifeq ($(TARGET_PRODUCT),SCH-R920)
-obj-$(CONFIG_BROADCOM_WIFI)	+= bcm4329/
-endif
-
-ifeq ($(TARGET_PRODUCT),SCH-R930)
-obj-$(CONFIG_BROADCOM_WIFI)	+= bcm4329/
-endif
-
-ifeq ($(TARGET_PRODUCT),SCH-R940)
-obj-$(CONFIG_BROADCOM_WIFI)	+= bcm4329/
-endif
+obj-$(CONFIG_BROADCOM_4330)	+= bcm4330/
