@@ -6,6 +6,8 @@ source "drivers/connector/Kconfig"
 
 source "drivers/mtd/Kconfig"
 
+source "drivers/samsung/Kconfig"
+
 source "drivers/of/Kconfig"
 
 source "drivers/parport/Kconfig"
