@@ -268,6 +268,15 @@ config MWL8K
 	  To compile this driver as a module, choose M here: the module
 	  will be called mwl8k.  If unsure, say N.
 
+config BROADCOM_WIFI
+	tristate "Hybrid BCM4329/BCM4330 device support"
+	depends on BROADCOM_WIFI
+	default n
+	---help---
+	  This option is for thos unusual setups that use a module made of both 	  4329 and 4330 driver parts.
+
+	  To compile this as a module, choose M here: This generally only works as 		  a module, but not every device supports this setup. If unsure, please say 	  N
+
 source "drivers/net/wireless/ath/Kconfig"
 source "drivers/net/wireless/b43/Kconfig"
 source "drivers/net/wireless/b43legacy/Kconfig"
