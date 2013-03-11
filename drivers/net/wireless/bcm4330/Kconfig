@@ -1,6 +1,6 @@
-config BROADCOM_4330
+config BROADCOM_WIFI
 	default n
-	tristate "Broadcom WiFi 4330"
+	tristate "Broadcom WiFi"
 	---help---
 		Select this option to build Broadcom wlan driver for the 4330 chip
 #config BCM_EMBED_FW

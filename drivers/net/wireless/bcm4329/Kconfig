@@ -1,6 +1,6 @@
-config BROADCOM_4329
+config BROADCOM_WIFI
 	default n
-	tristate "Broadcom WiFi 4329"
+	tristate "Broadcom WiFi"
 	---help---
 		Select this option to build Broadcom wlan driver
 
