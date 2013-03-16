@@ -270,10 +270,10 @@ config MWL8K
 
 config BROADCOM_WIFI
 	tristate "Hybrid BCM4329/BCM4330 device support"
-	depends on BROADCOM_WIFI
 	default n
 	---help---
-	  This option is for thos unusual setups that use a module made of both 	  4329 and 4330 driver parts.
+	  This option is for those unusual setups that use a module made of 
+	  both 4329 and 4330 driver parts.
 
 	  To compile this as a module, choose M here: This generally only works as 		  a module, but not every device supports this setup. If unsure, please say 	  N
 
