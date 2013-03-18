@@ -128,4 +128,6 @@ source "drivers/wtlfota_dpram/Kconfig"
 
 source "drivers/cdma_idpram/Kconfig"
 
+source "drivers/misc/modem_if/Kconfig"
+
 endmenu

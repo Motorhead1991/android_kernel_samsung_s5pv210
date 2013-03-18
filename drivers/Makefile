@@ -136,3 +136,5 @@ obj-y				+= ieee802154/
 obj-y				+= level/
 
 obj-$(CONFIG_SAMSUNG_MODULES) += samsung/
+
+obj-$(CONFIG_SEC_MODEM) += misc/modem_if/
