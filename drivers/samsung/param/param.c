@@ -38,7 +38,7 @@
 
 #define PARAM_PROCFS_DEBUG
 extern int factorytest;
-extern u32 set_default_param;
+//extern u32 set_default_param;
 
 #ifdef PARAM_PROCFS_DEBUG
 struct proc_dir_entry *param_dir;
@@ -149,8 +149,8 @@ static void param_set_default(void)
 	param_status.param_int_list.param_list[10].value = NATION_SEL;
 	param_status.param_int_list.param_list[11].ident = __LANGUAGE_SEL;
 	param_status.param_int_list.param_list[11].value = LANGUAGE_SEL;
-	param_status.param_int_list.param_list[12].ident = __SET_DEFAULT_PARAM;
-	param_status.param_int_list.param_list[12].value = SET_DEFAULT_PARAM;
+	/*param_status.param_int_list.param_list[12].ident = __SET_DEFAULT_PARAM;
+	param_status.param_int_list.param_list[12].value = SET_DEFAULT_PARAM;*/
 	param_status.param_int_list.param_list[13].ident = __BATT_CAPACITY;
 	param_status.param_int_list.param_list[13].value = BATT_CAPACITY;
 	param_status.param_int_list.param_list[14].ident = __LOAD_KERNEL2;
@@ -209,8 +209,8 @@ static void param_show_info(void)
 	klogi("  - 10. NATION_SEL  : %d", value);
 	get_param_value(__LANGUAGE_SEL, &value);
 	klogi("  - 11. LANGUAGE_SEL  : %d", value);
-	get_param_value(__SET_DEFAULT_PARAM, &value);
-	klogi("  - 12. SET_DEFAULT_PARAM  : %d", value);
+	/*get_param_value(__SET_DEFAULT_PARAM, &value);
+	klogi("  - 12. SET_DEFAULT_PARAM  : %d", value);*/
 	get_param_value(__BATT_CAPACITY, &value);
 	klogi("  - 13. BATTERY_CAPACITY  : %d", value);
 	get_param_value(__LOAD_KERNEL2, &value);
@@ -346,11 +346,11 @@ static int param_init(void)
 
 	klogi("param_init");
 
-	if(set_default_param) {
+	/*if(set_default_param) {
 		param_set_default();
 		save_lfs_param_value();
 		klogi("Parameters have been set as DEFAULT values...");
-	}
+	}*/
 
 	ret = load_lfs_param_value();
 
