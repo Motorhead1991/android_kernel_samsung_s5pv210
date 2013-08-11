@@ -47,6 +47,12 @@ obj-$(CONFIG_PHONE_ARIES_CDMA)	+= dev-s1-phone.o
 obj-$(CONFIG_PHONE_ARIES_CDMA)	+= level.o
 obj-$(CONFIG_PHONE_CRESPO)	+= dev-aries-phone.o
 
+obj-$(CONFIG_MACH_VIPER)	+= mach-viper.o viper-rfkill.o
+obj-$(CONFIG_MACH_VIPER)	+= sec-watchdog.o
+obj-$(CONFIG_MACH_VIPER)	+= viper-panel.o
+obj-$(CONFIG_MACH_VIPER)    += sec_switch.o
+#obj-$(CONFIG_MACH_VIPER)	+= dev-viper-phone.o
+
 # device support
 
 obj-y				+= dev-audio.o

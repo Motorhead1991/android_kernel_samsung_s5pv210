@@ -249,6 +249,31 @@ config MACH_ARIES
 	help
 	  Machine support for Aries
 
+config MACH_VIPER
+        bool "Viper"
+        select CPU_S5PV210
+        select ARCH_DISCONTIGMEM_ENABLE
+        select S3C_DEV_WDT
+        select HAVE_S3C2410_WATCHDOG
+        select S3C_DEV_I2C1
+        select S3C_DEV_I2C2
+        select HAVE_PWM
+        select ARCH_HAS_CPUFREQ
+        select S3C_DEV_HSMMC
+        select S3C_DEV_HSMMC1 if !S5PV210_SD_CH0_8BIT
+        select S3C_DEV_HSMMC2
+        select S3C_DEV_HSMMC3
+        select S5PV210_SETUP_SDHCI
+        select S5PV210_POWER_DOMAIN
+        help
+          Machine support for Viper
+ 
+config VIPER_USA
+        bool "select Viper"
+        depends on MACH_Viper
+        help
+        Select Viper
+
 if MACH_ARIES
 choice
 	prompt "Select phone Type"
